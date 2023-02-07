@@ -1,1 +1,46 @@
-<p>bmi works!</p>
+<!--
+  File: bmi.component.html
+  Author: Korcsmaros Kende Andras
+  Copyright: 2023, Korcsmaros Kende Andras
+  Group: Szoft II/N
+  Date: 2023.02.07
+  Github: https://github.com/KendeAndras/
+  Licenc: GNU GPL
+-->
+
+
+
+<div class="bmiForm">
+    <div class="mt-3">
+        <input type="text"
+        placeholder="Testtömeg(kg)"
+        [formControl]="weight"
+        class="form-control"
+        >
+    </div>
+    <div class="mt-3">
+        <input type="text"
+        placeholder="Magasság(m)"
+        [formControl]="height"
+        class="form-control"
+        (keyup)="keyboardWatch($event)"
+        >
+    </div>
+
+
+    <button (click)="onClickCalcButton()"
+    class="mt-3 btn btn-outline-danger">
+    Számítás
+    </button>
+
+    <div class="mt-3"
+    *ngIf="bmiVisible"
+    >
+        <input type="text"
+        readonly
+        [formControl]="bmi"
+        class="form-control"
+        >
+    </div>
+
+</div>
