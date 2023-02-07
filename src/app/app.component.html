@@ -1,18 +1,27 @@
-<ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link" href="/bmi">BMI</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/github">GitHub</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/about">Névjegy</a>
-  </li>
-</ul>
+<!--
+  File: app.component.html
+  Author: Korcsmaros Kende Andras
+  Copyright: 2023, Korcsmaros Kende Andras
+  Group: Szoft II/N
+  Date: 2023.02.07
+  Github: https://github.com/KendeAndras/
+  Licenc: GNU GPL
+-->
 
+<h1>{{title}}</h1>
 
 <div class="container">
-  
+  <ul class="nav">
+    <li class="nav-item">
+      <a routerLink="/bmi" class="nav-link">BMI</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/github" class="nav-link">GitHub</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/about" class="nav-link">Névjegy</a>
+    </li>
+  </ul>
+
   <router-outlet></router-outlet>
-  
 </div>
